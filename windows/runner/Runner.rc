@@ -89,13 +89,13 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "urgent_hai" "\0"
+            VALUE "CompanyName", "com.urgent.hai" "\0"
+            VALUE "FileDescription", "urgenthai" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "urgent_hai" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2025 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "urgent_hai.exe" "\0"
-            VALUE "ProductName", "urgent_hai" "\0"
+            VALUE "InternalName", "urgenthai" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2025 com.urgent.hai. All rights reserved." "\0"
+            VALUE "OriginalFilename", "urgenthai.exe" "\0"
+            VALUE "ProductName", "urgenthai" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

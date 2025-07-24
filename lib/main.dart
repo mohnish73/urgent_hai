@@ -1,41 +1,34 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:urgent_hai/screen/auth/splash_screen.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:urgenthai/resoures/app_colors.dart';
+import 'package:urgenthai/routes/routes_app.dart';
 
-import 'helper/app_utilities/app_theme.dart';
-import 'helper/app_utilities/size_reziser.dart';
 
 void main() {
   runApp(const MyApp());
 }
-final navigatorKey = GlobalKey<NavigatorState>();
-
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(
-      SystemUiOverlayStyle(
-        statusBarColor: materialPrimaryColor,
-        statusBarIconBrightness: Brightness.light,
-        statusBarBrightness:
-        Platform.isAndroid ? Brightness.dark : Brightness.light,
-        systemNavigationBarColor: Colors.black,
-        systemNavigationBarDividerColor: Colors.black,
-        systemNavigationBarIconBrightness: Brightness.light,
-      ),
-    );
-    SizeConfig().init(context);
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
+    return ScreenUtilInit(
+      designSize: const Size(393, 852),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      enableScaleWH: () => false,
 
-      title: 'Urgent Hai',
-      theme: defaultAppThemeData,
-      home: SplashScreen()
+      child: MaterialApp.router(
+        title: 'Urgent hai',
+        routerConfig: router,
+        theme: ThemeData(
+          textTheme: GoogleFonts.urbanistTextTheme(),
+          colorScheme: ColorScheme.fromSeed(seedColor: primary),
+        ),
+
+      ),
     );
   }
 }
