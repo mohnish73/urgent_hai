@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:urgenthai/resoures/app_colors.dart';
 import 'package:urgenthai/resoures/app_images.dart';
 import 'package:urgenthai/resoures/app_text_theme.dart';
+import 'package:urgenthai/routes/routes_name_app.dart';
 
 import '../../../custom_widgets/custom_app_button.dart';
 import '../../../resoures/app_strings.dart';
@@ -98,7 +100,11 @@ class _IntroScreenState extends State<IntroScreen> {
                           textColor: primaryDark,
                           color: primaryLight,
                           title: _pages[currentIndex].skip,
-                          onPressed: () {},
+                          onPressed: () {
+                            context.pushNamed(AppRouteConstants.loginName);
+
+
+                          },
                         ),
                       )
                     else
@@ -113,6 +119,8 @@ class _IntroScreenState extends State<IntroScreen> {
                         title: _pages[currentIndex].next,
                         onPressed: () {
                           if (currentIndex == _pages.length - 1) {
+
+                            context.pushNamed(AppRouteConstants.loginName);
                             // Navigate to home or login
                           } else {
                             _controller.nextPage(
