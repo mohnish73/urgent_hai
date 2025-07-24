@@ -17,8 +17,4 @@ class AppRouteConstants {
   static const createAccountName = 'createAccount';
 
 
-
-
-
-
 }

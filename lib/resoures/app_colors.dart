@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 // Background Colors
 const Color backgroundWhite = Color(0xFFFFFFFF);
-const Color backgroundF4F5F9 = Color(0xFFF4F5F9);
 const Color backgroundF5F5F5 = Color(0xFFF5F5F5);
 
 // Text Colors
@@ -19,4 +18,11 @@ const Color borderColor = Color(0xFFEBEBEB);
 const Color primary = Color(0xFFAEDC81);
 const Color primaryDark = Color(0xFF0BBE5E);
 const Color primaryLight = Color(0xFFEDFAF1);
+
+
+const Color textFormFieldBorderColor = Color(0xFFE8ECF4);
+const Color textFieldFilledColor = Color(0xFFF4F5F9);
+
+const Color dividerColor = Color(0xFFC5C9D2);
+
 

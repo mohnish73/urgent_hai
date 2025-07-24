@@ -19,6 +19,7 @@ extension UrbanistThemeTextExtension on TextTheme {
   // Label - Medium 12 / 15
   TextStyle get urbanistLabel12 => _urbanistMedium(12.sp);
   TextStyle get urbanistLabel15 => _urbanistMedium(15.sp);
+  TextStyle get urbanistLabel18 => _urbanistMedium(18.sp);
 
   // Custom Italic Bold White Text
   TextStyle get urbanistItalicBoldWhite18 => TextStyle(
@@ -36,12 +37,16 @@ TextStyle _urbanistRegular(double fontSize) => TextStyle(
    fontWeight: FontWeight.w400,
   fontSize: fontSize,
   color: Colors.black,
+  height: 1.40,
+  letterSpacing: 0.15,
 );
 
 TextStyle _urbanistMedium(double fontSize) => TextStyle(
    fontWeight: FontWeight.w500,
   fontSize: fontSize,
   color: Colors.black,
+  height: 1.40,
+  letterSpacing: 0.15,
 );
 
 TextStyle _urbanistSemiBold(double fontSize) => TextStyle(

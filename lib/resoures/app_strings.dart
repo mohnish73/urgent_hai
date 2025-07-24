@@ -15,4 +15,13 @@ class AppStrings {
     static const skip = 'Skip';
     static const continueText = 'Continue';
     static const letsGetStarted = 'Let’s Get Started';
+
+    static const welcomeBack = 'Welcome back! Glad to see you, Again!';
+    static const enterMobile = 'Enter your Mobile No';
+    static const dontHaveAccount = "Don’t have an account?";
+    static const registerNow = 'Register Now';
+    static const or = 'OR';
+    static const byContinue ='By continuing you agree to Privacy Policies and Terms and Conditions';
+
+
 }
