@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:urgenthai/resoures/app_colors.dart';
 
 extension UrbanistThemeTextExtension on TextTheme {
   // Title Bold (SemiBold - 15 / 20 / 25 / 30)
@@ -32,6 +33,7 @@ extension UrbanistThemeTextExtension on TextTheme {
   );
 }
 
+
 // 🔧 Private helpers
 TextStyle _urbanistRegular(double fontSize) => TextStyle(
    fontWeight: FontWeight.w400,
@@ -49,6 +51,8 @@ TextStyle _urbanistMedium(double fontSize) => TextStyle(
   letterSpacing: 0.15,
 );
 
+
+
 TextStyle _urbanistSemiBold(double fontSize) => TextStyle(
 
   fontWeight: FontWeight.w700,
@@ -57,3 +61,5 @@ TextStyle _urbanistSemiBold(double fontSize) => TextStyle(
   height: 1.30,
   letterSpacing: -0.30,
 );
+
+

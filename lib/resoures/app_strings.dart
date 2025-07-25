@@ -14,14 +14,21 @@ class AppStrings {
     // Common Buttons
     static const skip = 'Skip';
     static const continueText = 'Continue';
+    static const login = 'Login';
     static const letsGetStarted = 'Let’s Get Started';
 
     static const welcomeBack = 'Welcome back! Glad to see you, Again!';
     static const enterMobile = 'Enter your Mobile No';
     static const dontHaveAccount = "Don’t have an account?";
+    static const youCanResendOtp = "You can resend the code in ";
+    static const seconds = "seconds";
     static const registerNow = 'Register Now';
     static const or = 'OR';
     static const byContinue ='By continuing you agree to Privacy Policies and Terms and Conditions';
+
+
+    static const enterOTP ='Enter OTP';
+
 
 
 }

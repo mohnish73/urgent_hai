@@ -10,6 +10,9 @@ class AppRouteConstants {
   static const login = '/login';
   static const loginName = 'login';
 
+  static const otp = '/otp';
+  static const otpName = 'otp';
+
   static const mobileBottomNav = '/mobileBottomNav';
   static const mobileBottomNavName = 'mobileBottomNav';
 

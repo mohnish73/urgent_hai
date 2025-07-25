@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'package:urgenthai/resoures/app_colors.dart';
 import 'package:urgenthai/routes/routes_app.dart';
+import 'package:urgenthai/screens/auth_screen/provider/auth_provider.dart';
 
 
 void main() {
@@ -20,14 +22,22 @@ class MyApp extends StatelessWidget {
       splitScreenMode: true,
       enableScaleWH: () => false,
 
-      child: MaterialApp.router(
-        title: 'Urgent hai',
-        routerConfig: router,
-        theme: ThemeData(
-          textTheme: GoogleFonts.urbanistTextTheme(),
-          colorScheme: ColorScheme.fromSeed(seedColor: primary),
-        ),
+      child: MultiProvider(
+        providers: [
 
+          ChangeNotifierProvider(create: (_) => AuthProvider()),
+
+        ],
+
+        child: MaterialApp.router(
+          title: 'Urgent hai',
+          routerConfig: router,
+          theme: ThemeData(
+            textTheme: GoogleFonts.urbanistTextTheme(),
+            colorScheme: ColorScheme.fromSeed(seedColor: primary),
+          ),
+
+        ),
       ),
     );
   }

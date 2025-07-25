@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:urgenthai/custom_widgets/custom_app_button.dart';
 import 'package:urgenthai/resoures/app_colors.dart';
 import 'package:urgenthai/resoures/app_images.dart';
 import 'package:urgenthai/resoures/app_strings.dart';
 import 'package:urgenthai/resoures/app_text_theme.dart';
+import 'package:urgenthai/routes/routes_name_app.dart';
 
 import '../../../custom_widgets/custom_text_form_field.dart';
 import 'components/back_button.dart';
@@ -55,6 +57,8 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
           SizedBox(height: 33.h,),
           CustomAppButton(title: AppStrings.continueText, onPressed: () {
+
+            context.pushNamed(AppRouteConstants.otpName);
 
           },),
           SizedBox(height: 28.h,),
@@ -116,19 +120,14 @@ class _LoginScreenState extends State<LoginScreen> {
 
           ],),
 
-
-
-          Text(
-            AppStrings.byContinue,
-            style: Theme.of(context).textTheme.urbanistLabel15,
-          ),
-
-
-
-
-
-
         ],),
+      ),
+      bottomNavigationBar:   Padding(
+        padding:   EdgeInsets.all(24.0.w),
+        child: Text(
+          AppStrings.byContinue,
+          style: Theme.of(context).textTheme.urbanistLabel15,
+        ),
       ),
     );
   }
