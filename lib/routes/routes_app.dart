@@ -5,6 +5,7 @@ import 'package:urgenthai/screens/auth_screen/ui/sucessfully_register_screen.dar
 import 'package:urgenthai/screens/auth_screen/ui/login_screen.dart';
 import 'package:urgenthai/screens/auth_screen/ui/otp_screen.dart';
 import 'package:urgenthai/screens/auth_screen/ui/signup_screen.dart';
+import 'package:urgenthai/screens/home_screen/home_screen.dart';
 import 'package:urgenthai/screens/intro_screen/ui/intro_screens.dart';
 
 import '../../screens/splash_screen/ui/splash_screen.dart';
@@ -49,6 +50,11 @@ initialLocation:  AppRouteConstants.splash,
       path: AppRouteConstants.successfullyRegister,
       name: AppRouteConstants.successfullyRegisterName,
       builder: (context, state) => const SuccessfullyRegisterScreen(),
+    ),
+    GoRoute(
+      path: AppRouteConstants.home,
+      name: AppRouteConstants.homeName,
+      builder: (context, state) => const HomeScreen(),
     ),
 
   ],

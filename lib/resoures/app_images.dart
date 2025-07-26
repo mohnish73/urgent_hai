@@ -18,6 +18,14 @@ class AppImages {
   static const String allDoneImage = '${_images}all_done_image.png';
   static const String verifiedBlueTick = '${_images}verified_blue_tick.png';
 
+  static const String locationGreenIcon = '${_images}location_green_icon.png';
+  static const String greenSearchIcon = '${_images}green_search_icon.png';
+  static const String waveEmoji = '${_images}wave_emoji.png';
+
+  static const String rideIcon = '${_images}ride_icon.png';
+   static const String parcelIcon = '${_images}parcel_icon.png';
+  static const String storeIcon = '${_images}store_icon.png';
+
 
 }
 

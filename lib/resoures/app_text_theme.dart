@@ -11,6 +11,7 @@ extension UrbanistThemeTextExtension on TextTheme {
 
   // Paragraph Regular - Regular 15
   TextStyle get urbanistParagraph15 => _urbanistRegular(15.sp);
+  TextStyle get urbanistParagraph20 => _urbanistRegular(20.sp);
 
   // Paragraph Medium - Medium 10 / 12 / 15
   TextStyle get urbanistParagraph10Med => _urbanistMedium(10.sp);
@@ -47,8 +48,8 @@ TextStyle _urbanistMedium(double fontSize) => TextStyle(
    fontWeight: FontWeight.w500,
   fontSize: fontSize,
   color: Colors.black,
-  height: 1.40,
-  letterSpacing: 0.15,
+  height: 1.30,
+  letterSpacing: -0.20,
 );
 
 

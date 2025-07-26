@@ -35,6 +35,7 @@ class CustomTextFormField extends StatefulWidget {
   final Color? hintColor;
   final Color? filledColor;
   final Color? borderColor;
+  final double? contentHorizontalPadding;
 
   const CustomTextFormField({
     this.controller,
@@ -54,7 +55,7 @@ class CustomTextFormField extends StatefulWidget {
     this.prefixIcon,
     this.borderRadius,
     this.validationResult,
-    this.readOnly, this.autofocus, this.filledColor, this.borderColor,
+    this.readOnly, this.autofocus, this.filledColor, this.borderColor, this.contentHorizontalPadding,
   });
 
   @override
@@ -71,8 +72,20 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(
+        Container(
           height: widget.height??56.h,
+          decoration: BoxDecoration(
+            color: widget.filledColor?? textFieldFilledColor,
+
+            borderRadius: BorderRadius.circular(widget.borderRadius??8),
+
+            // border: Border(
+            //
+            //     color: widget.borderColor ?? textFormFieldBorderColor,
+            //     width: 0.5),
+
+
+          ),
           child:
           TextFormField(
             obscuringCharacter: "*",
@@ -115,10 +128,10 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
               // fillColor: Color(0xFFFBFBFB),
                 fillColor: widget.filledColor?? textFieldFilledColor,
 
-                filled: true,
+                // filled: true,
                 contentPadding: EdgeInsets.symmetric(
-                  vertical: 10, // Adjust vertical padding to control height
-                  horizontal: 10.0, // Adjust horizontal padding as needed
+                  vertical: 18, // Adjust vertical padding to control height
+                  horizontal: widget.contentHorizontalPadding??10.0, // Adjust horizontal padding as needed
                 ),
                 hintText: widget.hintText,
                 hintStyle: Theme.of(context).textTheme.urbanistLabel15.copyWith(
@@ -131,41 +144,41 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
                 //   fontWeight: FontWeight.w400,
                 // ),
                 errorStyle: TextStyle(fontSize: 0.0001),
-                // border: InputBorder.none,
-                disabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(widget.borderRadius??8),
+                border: InputBorder.none,
+                // disabledBorder: OutlineInputBorder(
+                //   borderRadius: BorderRadius.circular(widget.borderRadius??8),
+                //
+                //   borderSide: BorderSide(color:widget.borderColor ??textFormFieldBorderColor,width: 0.5),
+                //
+                // ),
+                // enabledBorder: OutlineInputBorder(
+                //   borderRadius: BorderRadius.circular(widget.borderRadius??8),
+                //
+                //   borderSide: BorderSide(color: widget.borderColor ??textFormFieldBorderColor,width: 0.5),
+                // ),
+                // focusedBorder: OutlineInputBorder(
+                //   borderRadius: BorderRadius.circular(widget.borderRadius??8),
+                //
+                //   borderSide: BorderSide(color:widget.borderColor ?? textFormFieldBorderColor,width: 0.5),
+                //
+                // ),
+                // focusedErrorBorder: OutlineInputBorder(
+                //   borderRadius: BorderRadius.circular(widget.borderRadius??8),
+                //
+                //   borderSide: BorderSide(color:widget.borderColor ?? textFormFieldBorderColor,width: 0.5),
+                // ),
+                //
+                // errorBorder: OutlineInputBorder(
+                //     borderSide: BorderSide(color: widget.borderColor ??textFormFieldBorderColor,width: 0.5),
+                //     borderRadius:
+                //     BorderRadius.all(Radius.circular(widget.borderRadius ?? 8))),
 
-                  borderSide: BorderSide(color:widget.borderColor ??textFormFieldBorderColor,width: 0.5),
 
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(widget.borderRadius??8),
-
-                  borderSide: BorderSide(color: widget.borderColor ??textFormFieldBorderColor,width: 0.5),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(widget.borderRadius??8),
-
-                  borderSide: BorderSide(color:widget.borderColor ?? textFormFieldBorderColor,width: 0.5),
-
-                ),
-                focusedErrorBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(widget.borderRadius??8),
-
-                  borderSide: BorderSide(color:widget.borderColor ?? textFormFieldBorderColor,width: 0.5),
-                ),
-
-                errorBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: widget.borderColor ??textFormFieldBorderColor,width: 0.5),
-                    borderRadius:
-                    BorderRadius.all(Radius.circular(widget.borderRadius ?? 8))),
-
-
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(widget.borderRadius??8),
-
-                  borderSide: BorderSide(color:widget.borderColor ?? textFormFieldBorderColor,width: 0.5),
-                ),
+                // border: OutlineInputBorder(
+                //   borderRadius: BorderRadius.circular(widget.borderRadius??8),
+                //
+                //   borderSide: BorderSide(color:widget.borderColor ?? textFormFieldBorderColor,width: 0.5),
+                // ),
                 suffixIcon: widget.suffixIcon,
                 prefixIcon: widget.prefixIcon),
             style: Theme.of(context).textTheme.urbanistLabel15.copyWith(
@@ -175,29 +188,10 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
         ),
 
 
-        // if (_errorText != null && _errorText!.isNotEmpty)
-        //   Padding(
-        //     padding: const EdgeInsets.only(top: 5),
-        //     child: Text(
-        //       _errorText!,
-        //       style: TextStyle(
-        //         color: Colors.red,
-        //         fontSize: 11.h,
-        //       ),
-        //     ),
-        //   ),
 
       ],
     );
 
-    /// wrap in coloum
-    // if (_errorMessage != null)
-    //   Padding(
-    //     padding: const EdgeInsets.only(left: 10, top: 5),
-    //     child: Text(
-    //       _errorMessage!,
-    //       style: const TextStyle(color: Colors.red, fontSize: 12),
-    //     ),
-    //   ),
+
   }
 }

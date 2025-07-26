@@ -22,5 +22,8 @@ class AppRouteConstants {
   static const successfullyRegister = '/successfullyRegister';
   static const successfullyRegisterName = 'successfullyRegister';
 
+  static const home = '/home';
+  static const homeName = 'home';
+
 
 }

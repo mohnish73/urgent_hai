@@ -46,5 +46,10 @@ class AppStrings {
     static const letsGo = 'Let’s Go';
 
 
+    static const search = 'Search';
+    static const welcomePratham = 'Welcome Pratham!';
+    static const homeMsg = 'Your go to partner for all you need quickly be it a ride or a grocery!';
+
+
 
 }

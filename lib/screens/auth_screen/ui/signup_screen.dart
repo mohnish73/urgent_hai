@@ -4,14 +4,12 @@ import 'package:go_router/go_router.dart';
 import 'package:urgenthai/custom_widgets/custom_app_button.dart';
 import 'package:urgenthai/custom_widgets/custom_bounce.dart';
 import 'package:urgenthai/resoures/app_colors.dart';
-import 'package:urgenthai/resoures/app_images.dart';
-import 'package:urgenthai/resoures/app_strings.dart';
+ import 'package:urgenthai/resoures/app_strings.dart';
 import 'package:urgenthai/resoures/app_text_theme.dart';
 import 'package:urgenthai/routes/routes_name_app.dart';
 
 import '../../../custom_widgets/custom_text_form_field.dart';
 import 'components/back_button.dart';
-import 'components/social_login_buttons.dart';
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
