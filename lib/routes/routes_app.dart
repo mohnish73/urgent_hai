@@ -1,8 +1,10 @@
  import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
  import 'package:urgenthai/routes/routes_name_app.dart';
+import 'package:urgenthai/screens/auth_screen/ui/sucessfully_register_screen.dart';
 import 'package:urgenthai/screens/auth_screen/ui/login_screen.dart';
 import 'package:urgenthai/screens/auth_screen/ui/otp_screen.dart';
+import 'package:urgenthai/screens/auth_screen/ui/signup_screen.dart';
 import 'package:urgenthai/screens/intro_screen/ui/intro_screens.dart';
 
 import '../../screens/splash_screen/ui/splash_screen.dart';
@@ -34,11 +36,20 @@ initialLocation:  AppRouteConstants.splash,
     ),
 
     GoRoute(
+      path: AppRouteConstants.signup,
+      name: AppRouteConstants.signupName,
+      builder: (context, state) => const SignupScreen(),
+    ),
+    GoRoute(
       path: AppRouteConstants.otp,
       name: AppRouteConstants.otpName,
       builder: (context, state) => const OtpScreen(),
     ),
-
+    GoRoute(
+      path: AppRouteConstants.successfullyRegister,
+      name: AppRouteConstants.successfullyRegisterName,
+      builder: (context, state) => const SuccessfullyRegisterScreen(),
+    ),
 
   ],
 );

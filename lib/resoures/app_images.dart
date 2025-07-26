@@ -15,5 +15,9 @@ class AppImages {
   static const String apple_logo = '${_images}apple_logo.png';
 
 
+  static const String allDoneImage = '${_images}all_done_image.png';
+  static const String verifiedBlueTick = '${_images}verified_blue_tick.png';
+
+
 }
 

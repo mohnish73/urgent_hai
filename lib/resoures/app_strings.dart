@@ -28,6 +28,22 @@ class AppStrings {
 
 
     static const enterOTP ='Enter OTP';
+    static const helloRegister ='Hello! Register to get started';
+
+    static const firstName = 'First Name';
+    static const lastName = 'Last Name';
+    static const dateOfBirth = 'DOB';
+    static const gender = 'Gender';
+    static const mobileNumber = 'Mobile';
+    static const register = 'Register';
+    static const loginNow = 'Login Now';
+
+    static const alreadyHaveAccount = "Already have an account?";
+
+    // 🎉 New - All Done Screen
+    static const allDoneTitle = 'All Done';
+    static const allDoneSubtitle = 'Thanks for giving us your precious time. Now you are ready to explore the world of $prathams';
+    static const letsGo = 'Let’s Go';
 
 
 

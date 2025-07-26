@@ -16,8 +16,11 @@ class AppRouteConstants {
   static const mobileBottomNav = '/mobileBottomNav';
   static const mobileBottomNavName = 'mobileBottomNav';
 
-  static const createAccount = '/createAccount';
-  static const createAccountName = 'createAccount';
+  static const signup = '/signup';
+  static const signupName = 'signup';
+
+  static const successfullyRegister = '/successfullyRegister';
+  static const successfullyRegisterName = 'successfullyRegister';
 
 
 }

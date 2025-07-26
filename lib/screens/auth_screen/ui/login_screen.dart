@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:urgenthai/custom_widgets/custom_app_button.dart';
+import 'package:urgenthai/custom_widgets/custom_bounce.dart';
 import 'package:urgenthai/resoures/app_colors.dart';
 import 'package:urgenthai/resoures/app_images.dart';
 import 'package:urgenthai/resoures/app_strings.dart';
@@ -73,11 +74,17 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               SizedBox(width: 5.w,),
 
-              Text(
-                AppStrings.registerNow,
-                style: Theme.of(context).textTheme.urbanistLabel15.copyWith(
-                  color: primaryDark,
-                  fontWeight: FontWeight.w700,
+              CustomBounce(
+                onPressed: () {
+                  context.pushNamed(AppRouteConstants.signupName);
+
+                },
+                child: Text(
+                  AppStrings.registerNow,
+                  style: Theme.of(context).textTheme.urbanistLabel15.copyWith(
+                    color: primaryDark,
+                    fontWeight: FontWeight.w700,
+                  ),
                 ),
               ),
             ],
