@@ -55,7 +55,7 @@ class LocationProvider extends ChangeNotifier {
         if (placemarks.isNotEmpty) {
           final place = placemarks.first;
           // address = '${place.name}, ${place.locality}, ${place.administrativeArea}, ${place.country}';
-          address = '${place.name},\n${place.country}';
+          address = '${place.name}, ${place.locality},\n ${place.country}';
         }
       }
 

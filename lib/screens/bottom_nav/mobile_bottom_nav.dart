@@ -66,86 +66,86 @@ class _BottomNavState extends State<BottomNav> {
         }
       },
       canPop: false,
-      child: SafeArea(
-        child: Scaffold(
-          backgroundColor: Colors.white,
-          body: IndexedStack(
+      child: Scaffold(
+        backgroundColor: Colors.white,
+        body: SafeArea(
+          child: IndexedStack(
             index: _curr,
             children:   [
              HomeScreen(),
               AddressScreen(),
               ProfileScreen()
-
+          
              ],
           ),
-          bottomNavigationBar: SafeArea(
-            bottom: true,
-            child: ClipRect(
-              child: Padding(
-                padding: EdgeInsets.only(bottom: 5.h),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Container(
-                      height: 0.5.h,
-                      width: double.infinity,
-                      color: primaryLight,
+        ),
+        bottomNavigationBar: SafeArea(
+          bottom: true,
+          child: ClipRect(
+            child: Padding(
+              padding: EdgeInsets.only(bottom: 5.h),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Container(
+                    height: 0.5.h,
+                    width: double.infinity,
+                    color: primaryLight,
+                  ),
+                  Container(
+                    height: 70.h,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+
+
+                        CustomBounce(
+                          onPressed: () {
+                            setState(() {
+                              _curr = 0;
+                            });
+                          },
+                          child: MobileBottomTab(
+                            image: AppImages.prathamGreenIcon,
+                            title: AppStrings.home,
+                            isSelected: _curr == 0,
+                          ),
+
+                        ),
+
+                        CustomBounce(
+                          onPressed: () {
+                            setState(() {
+                              _curr = 1;
+                            });
+                          },
+                          child: MobileBottomTab(
+                            image: AppImages.addressUnselected,
+                            title: AppStrings.address,
+                            isSelected: _curr == 1,
+                          ),
+
+                        ),
+
+                        CustomBounce(
+                          onPressed: () {
+                            setState(() {
+                              _curr = 2;
+                            });
+                          },
+                          child: MobileBottomTab(
+                            image: AppImages.profileUnselected,
+                            title: AppStrings.profile,
+                            isSelected: _curr == 2,
+                          ),
+
+                        ),
+
+
+                      ],
                     ),
-                    Container(
-                      height: 70.h,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-
-
-                          CustomBounce(
-                            onPressed: () {
-                              setState(() {
-                                _curr = 0;
-                              });
-                            },
-                            child: MobileBottomTab(
-                              image: AppImages.prathamGreenIcon,
-                              title: AppStrings.home,
-                              isSelected: _curr == 0,
-                            ),
-
-                          ),
-
-                          CustomBounce(
-                            onPressed: () {
-                              setState(() {
-                                _curr = 1;
-                              });
-                            },
-                            child: MobileBottomTab(
-                              image: AppImages.addressUnselected,
-                              title: AppStrings.address,
-                              isSelected: _curr == 1,
-                            ),
-
-                          ),
-
-                          CustomBounce(
-                            onPressed: () {
-                              setState(() {
-                                _curr = 2;
-                              });
-                            },
-                            child: MobileBottomTab(
-                              image: AppImages.profileUnselected,
-                              title: AppStrings.profile,
-                              isSelected: _curr == 2,
-                            ),
-
-                          ),
-
-
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
           ),

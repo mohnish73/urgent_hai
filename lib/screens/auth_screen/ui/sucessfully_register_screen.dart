@@ -61,7 +61,7 @@ class _SuccessfullyRegisterScreenState extends State<SuccessfullyRegisterScreen>
 
           CustomAppButton(title: AppStrings.letsGo, onPressed: () {
 
-            context.pushNamed(AppRouteConstants.homeName);
+            context.goNamed(AppRouteConstants.bottomNavName);
 
           },),
 

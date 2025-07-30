@@ -1,68 +1,92 @@
- import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
- import 'package:urgenthai/routes/routes_name_app.dart';
-import 'package:urgenthai/screens/auth_screen/ui/sucessfully_register_screen.dart';
+import 'package:urgenthai/routes/routes_name_app.dart';
 import 'package:urgenthai/screens/auth_screen/ui/login_screen.dart';
 import 'package:urgenthai/screens/auth_screen/ui/otp_screen.dart';
 import 'package:urgenthai/screens/auth_screen/ui/signup_screen.dart';
+import 'package:urgenthai/screens/auth_screen/ui/sucessfully_register_screen.dart';
 import 'package:urgenthai/screens/bottom_nav/mobile_bottom_nav.dart';
 import 'package:urgenthai/screens/home_screen/home_screen.dart';
 import 'package:urgenthai/screens/intro_screen/ui/intro_screens.dart';
-
 import '../../screens/splash_screen/ui/splash_screen.dart';
-
 
 final GlobalKey<NavigatorState> rootNavigatorKey = GlobalKey<NavigatorState>();
 
 final GoRouter router = GoRouter(
-
-initialLocation:  AppRouteConstants.splash,
+  initialLocation: AppRouteConstants.splash,
   navigatorKey: rootNavigatorKey,
-
   routes: [
     GoRoute(
       path: AppRouteConstants.splash,
       name: AppRouteConstants.splashName,
-      builder: (context, state) => const SplashScreen(),
+      pageBuilder: (context, state) => _fadePage(state, const SplashScreen()),
     ),
     GoRoute(
       path: AppRouteConstants.intro,
       name: AppRouteConstants.introName,
-      builder: (context, state) => const IntroScreen(),
+      pageBuilder: (context, state) => _fadePage(state, const IntroScreen()),
     ),
-
     GoRoute(
       path: AppRouteConstants.login,
       name: AppRouteConstants.loginName,
-      builder: (context, state) => const LoginScreen(),
+      pageBuilder: (context, state) => _fadePage(state, const LoginScreen()),
     ),
-
     GoRoute(
       path: AppRouteConstants.signup,
       name: AppRouteConstants.signupName,
-      builder: (context, state) => const SignupScreen(),
+      pageBuilder: (context, state) => _fadePage(state, const SignupScreen()),
     ),
     GoRoute(
       path: AppRouteConstants.otp,
       name: AppRouteConstants.otpName,
-      builder: (context, state) => const OtpScreen(),
+      pageBuilder: (context, state) => _fadePage(state, const OtpScreen()),
     ),
     GoRoute(
       path: AppRouteConstants.successfullyRegister,
       name: AppRouteConstants.successfullyRegisterName,
-      builder: (context, state) => const SuccessfullyRegisterScreen(),
+      pageBuilder: (context, state) => _fadePage(state, const SuccessfullyRegisterScreen()),
     ),
     GoRoute(
       path: AppRouteConstants.home,
       name: AppRouteConstants.homeName,
-      builder: (context, state) => const HomeScreen(),
+      pageBuilder: (context, state) => _slidePage(state, const HomeScreen()),
     ),
     GoRoute(
       path: AppRouteConstants.bottomNav,
       name: AppRouteConstants.bottomNavName,
-      builder: (context, state) => const BottomNav(),
+      pageBuilder: (context, state) => _slidePage(state, const BottomNav()),
     ),
-
   ],
 );
 
+/// Common fade transition
+CustomTransitionPage _fadePage(GoRouterState state, Widget child) {
+  return CustomTransitionPage(
+    key: state.pageKey,
+    child: child,
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      return FadeTransition(
+        opacity: animation,
+        child: child,
+      );
+    },
+  );
+}
+
+/// Common slide-from-right transition
+CustomTransitionPage _slidePage(GoRouterState state, Widget child) {
+  return CustomTransitionPage(
+    key: state.pageKey,
+    child: child,
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      final slideTween = Tween<Offset>(
+        begin: const Offset(1, 0),
+        end: Offset.zero,
+      ).chain(CurveTween(curve: Curves.easeInOut));
+      return SlideTransition(
+        position: animation.drive(slideTween),
+        child: child,
+      );
+    },
+  );
+}
