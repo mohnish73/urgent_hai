@@ -6,6 +6,7 @@ import 'package:urgenthai/resoures/app_images.dart';
 import 'package:urgenthai/resoures/app_strings.dart';
 import 'package:urgenthai/resoures/app_text_theme.dart';
 
+import '../../custom_widgets/address_appbar.dart';
 import 'component/app_service_card.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -20,25 +21,13 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      appBar: AddressAppbar(isProfileImageShow: false,),
       body: SafeArea(
         child: Padding(
-          padding:   EdgeInsets.all(19.w),
+          padding:   EdgeInsets.only(left: 19.w,right: 19.w,bottom: 19.w,top: 5.h),
           child: Column(children: [
-            Padding(
-              padding:   EdgeInsets.only(left: 12.w),
-              child: Row(
-                children: [
-                  Image.asset(AppImages.locationGreenIcon,height: 32.w,width: 32.w,),
-                  SizedBox(width: 5.w,),
-                  Text("Gurgaon\nIndia",
-                  style: Theme.of(context).textTheme.urbanistParagraph20,
-                  ),
 
 
-                ],
-              ),
-            ),
-            SizedBox(height: 25.h,),
             Padding(
               padding:   EdgeInsets.only(right: 31.w),
               child: CustomTextFormField(filledColor: primaryLight,

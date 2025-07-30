@@ -5,12 +5,14 @@ import 'package:urgenthai/resoures/app_colors.dart';
 extension UrbanistThemeTextExtension on TextTheme {
   // Title Bold (SemiBold - 15 / 20 / 25 / 30)
   TextStyle get urbanistTitle15 => _urbanistSemiBold(15.sp);
+  TextStyle get urbanistTitle16 => _urbanistSemiBold(16.sp);
   TextStyle get urbanistTitle20 => _urbanistSemiBold(20.sp);
   TextStyle get urbanistTitle25 => _urbanistSemiBold(25.sp);
   TextStyle get urbanistTitle30 => _urbanistSemiBold(30.sp);
 
   // Paragraph Regular - Regular 15
   TextStyle get urbanistParagraph15 => _urbanistRegular(15.sp);
+  TextStyle get urbanistParagraph14 => _urbanistRegular(14.sp);
   TextStyle get urbanistParagraph20 => _urbanistRegular(20.sp);
 
   // Paragraph Medium - Medium 10 / 12 / 15
@@ -60,7 +62,7 @@ TextStyle _urbanistSemiBold(double fontSize) => TextStyle(
   fontSize: fontSize,
   color: Colors.black,
   height: 1.30,
-  letterSpacing: -0.30,
+  letterSpacing: -0.106,
 );
 
 

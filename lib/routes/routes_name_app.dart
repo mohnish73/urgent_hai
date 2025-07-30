@@ -13,8 +13,8 @@ class AppRouteConstants {
   static const otp = '/otp';
   static const otpName = 'otp';
 
-  static const mobileBottomNav = '/mobileBottomNav';
-  static const mobileBottomNavName = 'mobileBottomNav';
+  static const bottomNav = '/bottomNav';
+  static const bottomNavName = 'bottomNav';
 
   static const signup = '/signup';
   static const signupName = 'signup';
@@ -24,6 +24,8 @@ class AppRouteConstants {
 
   static const home = '/home';
   static const homeName = 'home';
+
+
 
 
 }

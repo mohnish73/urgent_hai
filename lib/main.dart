@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:urgenthai/core/provider_location/location_provider.dart';
 import 'package:urgenthai/resoures/app_colors.dart';
 import 'package:urgenthai/routes/routes_app.dart';
 import 'package:urgenthai/screens/auth_screen/provider/auth_provider.dart';
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
         providers: [
 
           ChangeNotifierProvider(create: (_) => AuthProvider()),
+          ChangeNotifierProvider(create: (_) => LocationProvider()),
 
         ],
 

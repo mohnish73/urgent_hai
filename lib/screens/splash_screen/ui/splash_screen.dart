@@ -35,7 +35,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
       context.goNamed(AppRouteConstants.introName);
 
     } else {
-      context.goNamed(AppRouteConstants.mobileBottomNavName);
+      context.goNamed(AppRouteConstants.bottomNavName);
     }
   }
 

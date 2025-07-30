@@ -24,6 +24,7 @@ const Color textFormFieldBorderColor = Color(0xFFE8ECF4);
 const Color textFieldFilledColor = Color(0xFFF4F5F9);
 
 const Color dividerColor = Color(0xFFC5C9D2);
+const Color bottomGrey = Color(0xFFDADADA);
 
 
 

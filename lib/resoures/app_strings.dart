@@ -51,5 +51,16 @@ class AppStrings {
     static const homeMsg = 'Your go to partner for all you need quickly be it a ride or a grocery!';
 
 
+    static const home = 'Home';
+    static const address = 'Address';
+    static const profile = 'Profile';
+
+    static const myFavourites = 'My Favourites';
+
+
+    static const aboutMe = 'About me';
+    static const history = 'History';
+    static const notifications = 'Notifications';
+    static const signOut = 'Sign out';
 
 }
