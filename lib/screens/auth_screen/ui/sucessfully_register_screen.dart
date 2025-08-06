@@ -9,7 +9,7 @@ import 'package:urgenthai/resoures/app_text_theme.dart';
 
  import '../../../custom_widgets/custom_app_button.dart';
 import '../../../routes/routes_name_app.dart';
-import 'components/back_button.dart';
+import '../../../custom_widgets/back_button.dart';
 
 
 class SuccessfullyRegisterScreen extends StatefulWidget {

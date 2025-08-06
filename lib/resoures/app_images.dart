@@ -42,6 +42,18 @@ class AppImages {
   static const String signOutIcon = '${_images}signout.png';
   static const String arrowForward = '${_images}arrow_forward.png';
 
+  // ride
+
+  static const String rideUnselected = '${_images}ride_unselected.png';
+  static const String activityUnselected = '${_images}history_unselected.png';
+  static const String homeArrow = '${_images}home_arrow.png';
+
+  static const String bike = '${_images}bike.png';
+  static const String auto = '${_images}auto.png';
+  static const String cabs = '${_images}cabs.png';
+
+
+
 
 
 }

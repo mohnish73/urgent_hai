@@ -26,6 +26,22 @@ class AppRouteConstants {
   static const homeName = 'home';
 
 
+  static const rideBottomNav = '/rideBottomNav';
+  static const rideBottomNavName = 'rideBottomNav';
+
+  static const ride = '/ride';
+  static const rideName = 'ride';
+
+
+  static const rideSearch = '/rideSearch';
+  static const rideSearchName = 'rideSearch';
+
+
+  static const rideBook = '/rideBook';
+  static const rideBookName = 'rideBook';
+
+
+
 
 
 }

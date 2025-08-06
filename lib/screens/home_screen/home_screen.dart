@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
+import 'package:urgenthai/custom_widgets/custom_bounce.dart';
 import 'package:urgenthai/custom_widgets/custom_text_form_field.dart';
 import 'package:urgenthai/resoures/app_colors.dart';
 import 'package:urgenthai/resoures/app_images.dart';
 import 'package:urgenthai/resoures/app_strings.dart';
 import 'package:urgenthai/resoures/app_text_theme.dart';
+import 'package:urgenthai/routes/routes_name_app.dart';
 
 import '../../custom_widgets/address_appbar.dart';
 import 'component/app_service_card.dart';
@@ -84,13 +87,18 @@ class _HomeScreenState extends State<HomeScreen> {
               spacing: 16, // Horizontal space between cards
               runSpacing: 16, // Vertical space when it wraps
               children: [
-                appServiceCard(
-                  context: context,
-                  serviceName: 'RIDE',
-                  serviceTitle: 'Get a ride',
-                  serviceImage: AppImages.rideIcon,
-                  imageHeight: 76,
-                  imageWidth: 108,
+                CustomBounce(
+                  onPressed: () {
+                    context.pushNamed(AppRouteConstants.rideBottomNavName);
+                  },
+                  child: appServiceCard(
+                    context: context,
+                    serviceName: 'RIDE',
+                    serviceTitle: 'Get a ride',
+                    serviceImage: AppImages.rideIcon,
+                    imageHeight: 76,
+                    imageWidth: 108,
+                  ),
                 ),
                 SizedBox(width: 10.w,),
                 appServiceCard(

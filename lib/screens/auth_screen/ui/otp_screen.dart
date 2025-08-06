@@ -9,7 +9,7 @@ import 'package:urgenthai/resoures/app_strings.dart';
 import 'package:urgenthai/resoures/app_text_theme.dart';
 
 import '../provider/auth_provider.dart';
-import 'components/back_button.dart';
+import '../../../custom_widgets/back_button.dart';
 import 'components/otp_field.dart';
 
 class OtpScreen extends StatefulWidget {

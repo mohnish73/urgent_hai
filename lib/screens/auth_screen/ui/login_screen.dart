@@ -10,7 +10,7 @@ import 'package:urgenthai/resoures/app_text_theme.dart';
 import 'package:urgenthai/routes/routes_name_app.dart';
 
 import '../../../custom_widgets/custom_text_form_field.dart';
-import 'components/back_button.dart';
+import '../../../custom_widgets/back_button.dart';
 import 'components/social_login_buttons.dart';
 
 class LoginScreen extends StatefulWidget {

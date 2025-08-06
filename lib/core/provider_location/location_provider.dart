@@ -11,6 +11,7 @@ class LocationProvider extends ChangeNotifier {
   double? latitude;
   double? longitude;
   String? address;
+  String? addressForLocationCard;
   bool isLoading = false;
 
   /// Your Google Maps Geocoding API Key
@@ -56,6 +57,7 @@ class LocationProvider extends ChangeNotifier {
           final place = placemarks.first;
           // address = '${place.name}, ${place.locality}, ${place.administrativeArea}, ${place.country}';
           address = '${place.name}, ${place.locality},\n ${place.country}';
+          addressForLocationCard = '${place.name}, ${place.locality}, ${place.country}';
         }
       }
 

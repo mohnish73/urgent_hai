@@ -6,6 +6,7 @@ import 'package:urgenthai/core/provider_location/location_provider.dart';
 import 'package:urgenthai/resoures/app_colors.dart';
 import 'package:urgenthai/routes/routes_app.dart';
 import 'package:urgenthai/screens/auth_screen/provider/auth_provider.dart';
+import 'package:urgenthai/screens/ride_module/ride_screen/provider/ride_provider.dart';
 
 
 void main() {
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
 
           ChangeNotifierProvider(create: (_) => AuthProvider()),
           ChangeNotifierProvider(create: (_) => LocationProvider()),
+          ChangeNotifierProvider(create: (_) => RideProvider()),
 
         ],
 

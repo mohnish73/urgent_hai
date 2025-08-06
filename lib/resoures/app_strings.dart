@@ -47,6 +47,7 @@ class AppStrings {
 
 
     static const search = 'Search';
+    static const destination = 'Destination';
     static const welcomePratham = 'Welcome Pratham!';
     static const homeMsg = 'Your go to partner for all you need quickly be it a ride or a grocery!';
 
@@ -62,5 +63,16 @@ class AppStrings {
     static const history = 'History';
     static const notifications = 'Notifications';
     static const signOut = 'Sign out';
+
+    static const ride = 'Ride';
+    static const activity = 'Activity';
+
+
+    static const bookARide = 'Book a ride';
+    static const book = 'Book';
+    static const enterDestination = 'Enter Destination';
+    static const recommendedOptions = 'Recommended Options';
+
+    static const bookRideText = 'Book an Auto now and pay in cash later!';
 
 }
